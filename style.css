@@ -1,0 +1,35 @@
+.main{
+    display: flex;
+    justify-content: center;
+}
+.main_wrapper{
+    width: 70%;
+    height: 400px;
+    background: violet;
+    color: darkslategray;
+    text-shadow: 1px 1px 1px black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin: 100px;
+
+}
+.main_wrapper_container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+}
+.main_wrapper_container p{
+ padding: 10px;
+    margin: 7px;
+    font-size: 30px;
+
+}
+.main_wrapper_container p:hover{
+    font-size: 40px;
+    transition: 0.3s;
+    color: yellow;
+    text-shadow: 2px 2px 2px black;
+
+}
