@@ -138,32 +138,33 @@
 
 
 // ___________________________________пытаюсь что то сделать сам c promise_______________________________
-// const hello = document.getElementById('green')
-// const fontSize = document.getElementById('35px')
-// const border = document.getElementById('border')
-// const b = new Promise((resolve)=>{
-//  setTimeout(()=> {
-//      console.log(hello)
-//      hello.style.color = 'green'
-//      hello.style.transition = '0.2s'
-//      resolve()
-//  },1500)
-// }).then(()=> {
-//     setTimeout(()=> {
-//         console.log(fontSize)
-//         fontSize.style.fontSize = '70px'
-//         fontSize.style.transition = '0.8s'
-//     },1500)
-// }).then(()=> setTimeout(()=> {
-//     console.log(border)
-//     border.style.border = '6px solid red'
-//     border.style.boxShadow = '8px 8px 20px black'
-//     border.style.transition = '0.5s'
-// },1500))
-//
-// b.finally(()=> {
-//     console.log('Its okay')
-// })
+const hello = document.getElementById('green')
+const fontSize = document.getElementById('35px')
+const border = document.getElementById('border')
+const b = new Promise((resolve,)=>{
+ setTimeout(()=> {
+     hello.classList.add('newClass')
+     console.log(hello)
+     hello.style.color = 'green'
+     hello.style.transition = '0.2s'
+     resolve()
+ },1500)
+}).then(()=> {
+    setTimeout(()=> {
+        console.log(fontSize)
+        fontSize.style.fontSize = '70px'
+        fontSize.style.transition = '0.8s'
+    },1500)
+}).then(()=> setTimeout(()=> {
+    console.log(border)
+    border.style.border = '6px solid red'
+    border.style.boxShadow = '8px 8px 20px black'
+    border.style.transition = '0.5s'
+},1500))
+
+b.finally(()=> {
+    console.log('Its okay')
+})
 
 
 // ______________________________ методы массивов ______________________________
