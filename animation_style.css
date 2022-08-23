@@ -2,73 +2,208 @@
     display: flex;
     justify-content: center;
 
+
 }
 
 .main_wrapper {
-    background: greenyellow;
-    width: 60%;
-    min-height: 600px;
+    width: 100%;
+    height: 100vh;
     margin: 10%;
-    border-radius: 20px;
-    /*position: relative;*/
+    position: relative;
+
 
 
 }
 
+/*.top_sky {*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*    background: deepskyblue;*/
+/*    display: flex;*/
+/*    align-items: flex-end;*/
+/*    position: relative;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*._bott_earth {*/
+/*    height: 65%;*/
+/*    width: 100%;*/
+/*    background: sandybrown;*/
+/*}*/
+
 .main_wrapper_container {
-    position: relative;
+    /*position: relative;*/
 
 }
 
 .wood img {
-    width: 1%;
+    width: 0px;
     /*margin: 20px 0 0 20px;*/
-    position: absolute;
-    top: 130px;
-    left: 5%;
-    z-index: 10;
+    /*position: absolute;*/
+    /*top: 130px;*/
+    /*left: 5%;*/
+    /*z-index: 110;*/
+    margin-left: 30px;
+
+
 }
 
 .lake img {
-    position: absolute;
-    z-index: 9;
-    width: 1%;
+
+    /*z-index: 9;*/
+    /*width: 0px;*/
     top: 250px;
-    left: 25%;
+    left: 3%;
+    margin-left: 200px;
+
 }
 
-.fish{
+.fish {
     /*position: relative;*/
 }
 
 .fish img {
     position: absolute;
     z-index: 11;
-    width: 10%;
+    width: 0px;
     left: 70%;
-    top: 420px;
+    top: 480px;
     opacity: 0.7;
     animation-name: fish_go;
-    animation-duration: 3s;
+    animation-duration: 6s;
     animation-timing-function: ease-in;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    animation-delay: 2s ;
+    animation-delay: 2.5s;
 }
 
 @keyframes fish_go {
     0% {
+        width: 10%;
         left: 75%;
     }
-    50%{
-        width: 11%;
+    50% {
+        width: 12%;
     }
     100% {
         left: 35%;
+        width: 10%;
         /*transform-origin: bottom 100px;*/
-        /*transform: rotate(360deg);*/
-        /*transform: scale(-1, 1)*/
+        /*transform: rotate(180deg);*/
+        /*transform: scale(-1, 1);*/
         /*transform:rotateY(180deg);*/
-        transform-style: revert;
+        /*transform-style: revert;*/
+    }
+}
+
+.sun img {
+    width: 0px;
+    position: absolute;
+    top: -5%;
+    left: 65%;
+    animation-name: sun;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 2.5s;
+
+
+}
+
+.sunBig{
+    position: absolute;
+    z-index: 100;
+    border-radius: 50%;
+    background: red;
+    opacity: 0.4;
+
+}
+
+@keyframes sun {
+    0% {
+        width: 40%;
+        /*width: 4%;*/
+        /*top: -5%;*/
+        /*left: 65%;*/
+    }
+    100% {
+        width: 44%;
+        /*top: -5%;*/
+        /*left: 65%;*/
+    }
+}
+
+.cloud img {
+    width: 40%;
+    position: absolute;
+    opacity: 0;
+    top: 2%;
+    left: 70%;
+    animation-name: cloud;
+    animation-duration: 30s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: initial;
+    animation-direction: normal;
+    animation-delay: 2.5s;
+    /*display: none;*/
+
+}
+
+@keyframes cloud {
+    0% {
+        width: 40%;
+        left: 70%;
+        /*width: 4%;*/
+        /*top: -5%;*/
+        /*left: 65%;*/
+
+
+    }
+    40% {
+        opacity: 0.4;
+    }
+    60% {
+        opacity: 0.6;
+
+    }
+    80% {
+        /*width: 35%;*/
+        left: 0%;
+        /*top: -5%;*/
+        /*left: 65%;*/
+        opacity: 0;
+
+    }
+    100% {
+
+    }
+
+}
+
+.rain_wrapper {
+    /*background: url("img/free-png.ru-94.png");*/
+  position: absolute;
+    /*position: absolute;*/
+    z-index: 1000;
+    /*width: 100%;*/
+    /*height: 100vh;*/
+    /*margin-left: 2.5%;*/
+    animation: rain 0.100s linear infinite;
+    animation-delay: 14s;
+    background: none;
+}
+
+@keyframes rain {
+    0% {
+        background-position: -70% -70%;
+        /*opacity: 0.8;*/
+    }
+    80% {
+        background: url("img/free-png.ru-94.png");
+        background-position: 20% 100%;
+    }
+    100%{
+        opacity: 0.9;
     }
 }
